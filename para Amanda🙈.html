@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Para ti Amanda 🙈</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #f9c5d1, #fbd786);
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      transition: background 1s ease;
+    }
+
+    h1 {
+      color: #ff4081;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #fff;
+      border: 2px solid #ff4081;
+      color: #ff4081;
+      font-size: 1.2em;
+      padding: 10px 20px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #ff4081;
+      color: white;
+    }
+
+    .mensaje-box {
+      display: none;
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      max-width: 80%;
+      text-align: center;
+      animation: aparecer 1s ease-in-out forwards;
+    }
+
+    .mensaje-box p {
+      font-size: 1.3em;
+      color: #444;
+    }
+
+    @keyframes aparecer {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1 id="titulo"> ✨Toca aqui✨</h1>
+  <button id="boton" onclick="mostrarMensaje()">Abrir Sorpresa</button>
+
+  <div class="mensaje-box" id="mensaje">
+    <p>🌸 ¡Hola Amandaaaa! Solo quería decirte que eres una persona maravillosa. sjs ✨</p>
+    <p>"Sé que esto es inesperado, pero quería hacerte sonreír jjsjs y tú te mereces algo especial simplemente por ser tú. Gracias por tu amistad, tu forma de ser, y por estar. Ojalá esto te saque una sonrisa, aunque sea una chiquita 😄" jajaja se que te gustará</p>
+  </div>
+
+  <script>
+    function mostrarMensaje() {
+      document.getElementById('boton').style.display = 'none';
+      document.getElementById('titulo').style.display = 'none';
+      document.getElementById('mensaje').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
